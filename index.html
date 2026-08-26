@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Centres Access to Railway Lines</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="mark">●</span><div><p class="eyebrow">TRANSPORT ACCESS</p><h1>Business Centres<br />Access to Railway Lines</h1></div></div>
+        <p class="intro">Explore business centres and railway lines across Zimbabwe.</p>
+
+        <section class="card layers-card">
+          <div class="section-heading"><h2>Map layers</h2></div>
+          <label class="toggle"><input type="checkbox" id="centres-toggle" checked /><span></span>Business centres <b id="centres-count">—</b></label>
+          <label class="toggle"><input type="checkbox" id="rail-toggle" checked /><span></span>Rail network <b id="rail-count">—</b></label>
+          <label class="toggle"><input type="checkbox" id="boundary-toggle" checked /><span></span>Province boundary</label>
+        </section>
+
+        <section class="card compact">
+          <h2>OpenStreetMap base map</h2>
+          <p class="hint">The standard OpenStreetMap map is lightweight and needs no API key. It is designed to load quickly on most connections.</p>
+        </section>
+
+        <div class="source-note">Data: supplied Zimbabwe Business Centres and Rail Network features; © OpenStreetMap contributors for the base map.</div>
+      </aside>
+      <section class="map-panel">
+        <div id="map"></div>
+        <div class="map-header"><div><p class="eyebrow">INTERACTIVE MAP</p><h2>Business centres & railway lines</h2></div><div id="status" class="status loading">Loading local data…</div></div>
+        <div class="stats" aria-live="polite"><div><span id="stat-centres">—</span><small>business centres</small></div><div><span id="stat-rail">—</span><small>railway lines</small></div></div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="data/local-layers.js?v=7"></script>
+    <script src="app.js?v=7"></script>
+  </body>
+</html>
